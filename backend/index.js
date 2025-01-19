@@ -7,6 +7,7 @@ ConnectToMongo(); // Call the function to connect to MongoDB
 const app = express();
 const port = 3000;
 
+
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/notebook', {
   useNewUrlParser: true,
