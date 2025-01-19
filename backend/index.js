@@ -1,19 +1,7 @@
-{
-    "message": "Welcome to Thunder Client",
-    "about": "Lightweight Rest API Client for VSCode",
-    "createdBy": "Ranga Vadhineni",
-    "launched": 2021,
-    "features": {
-      "git": "Save data to Git Workspace",
-      "themes": "Supports VSCode Themes",
-      "data": "Collections & Environment Variables",
-      "testing": "Scriptless Testing",
-      "local": "Local Storage & Works Offline"
-    },
-    "supports": {
-      "graphql": true,
-      "codeSnippet": true,
-      "requestChaining": true,
-      "scripting": true
-    }
-  }
+// const ConnectTomongo= required('./db')
+
+// ConnectTomongo();
+
+const ConnectToMongo = require('./db'); // Fix 'required' to 'require'
+
+ConnectToMongo(); // Call the function to connect to MongoDB
