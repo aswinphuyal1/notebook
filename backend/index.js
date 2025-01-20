@@ -1,22 +1,18 @@
+const connectToMongo = require('./db');
 const express = require('express');
-const mongoose = require('mongoose');
-const ConnectToMongo = require('./db'); // Ensure this path is correct
+var cors = require('cors');
 
-ConnectToMongo(); // Call the function to connect to MongoDB
-
+connectToMongo();
 const app = express();
-const port = 3000;
+const port = 5000;
 
-// Remove redundant MongoDB connection code
-// mongoose.connect('mongodb://localhost:27017/notebook', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// }).then(() => {
-//   console.log('Connected to MongoDB');
-// }).catch((error) => {
-//   console.error('Error connecting to MongoDB:', error);
-// });
+app.use(cors());
+app.use(express.json());
+
+// Available Routes
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/notes', require('./routes/notes'));
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`iNotebook backend listening at http://localhost:${port}`);
 });

@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
-const ConnectToMongo = () => {
-  mongoose.connect('mongodb://localhost:27017/notebook', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }).then(() => {
-    
-    console.log('Connected to MongoDB');
-  }).catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
-  });
+const mongoURI = "mongodb://localhost:27017/admin";
+
+const connectToMongo = () => {
+    mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+        .then(() => {
+            console.log("Connected to Mongo Successfully");
+        })
+        .catch((err) => {
+            console.error("Error connecting to Mongo:", err);
+        });
 };
 
-module.exports = ConnectToMongo;
+module.exports = connectToMongo;
