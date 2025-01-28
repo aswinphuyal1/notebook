@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
 
-//const mongoURI = "mongodb://localhost:27017/inotebook?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
-const mongoURI = "mongodb://localhost:27017/curd?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+// Use the provided connection string
+const mongoURI = "mongodb://localhost:27017/curd";
 
 const connectToMongo = () => {
-    mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+    mongoose.connect(mongoURI, { 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 30000 // Increase timeout to 30 seconds
+    }, () => {
         console.log("Connected to Mongo Successfully");
     });
 };
