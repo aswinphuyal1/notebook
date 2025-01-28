@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "express-validator": "^7.2.1",
     "react": "latest",
     "react-dom": "latest"
   },
