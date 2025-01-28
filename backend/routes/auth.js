@@ -46,7 +46,6 @@ router.post('/createuser', [
     }
     const authtoken = jwt.sign(data, JWT_SECRET);
 
-
     // res.json(user)
     res.json({ authtoken })
 
@@ -55,7 +54,6 @@ router.post('/createuser', [
     res.status(500).send("Internal Server Error");
   }
 })
-
 
 // ROUTE 2: Authenticate a User using: POST "/api/auth/login". No login required
 router.post('/login', [
@@ -100,7 +98,6 @@ router.post('/login', [
 
 });
 
-
 // ROUTE 3: Get loggedin User Details using: POST "/api/auth/getuser". Login required
 router.post('/getuser', fetchuser,  async (req, res) => {
 
@@ -113,4 +110,4 @@ router.post('/getuser', fetchuser,  async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 })
-module.exports = router
+module.exports = router;
