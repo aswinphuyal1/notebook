@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   res.send('Notes route');
 });
 
-// ROUTE 1: Get All the Notes using: GET "/api/notes/getuser". Login required
+// ROUTE 1: Get All the Notes using: GET "/api/notes/fetchallnotes". Login required
 router.get('/fetchallnotes', fetchuser, async (req, res) => {
     try {
         const notes = await Note.find({ user: req.user.id });
@@ -89,4 +89,4 @@ router.delete('/deletenote/:id', fetchuser, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 })
-module.exports = router
+module.exports = router;

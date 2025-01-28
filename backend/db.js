@@ -8,8 +8,12 @@ const connectToMongo = () => {
         useNewUrlParser: true, 
         useUnifiedTopology: true,
         serverSelectionTimeoutMS: 30000 // Increase timeout to 30 seconds
-    }, () => {
-        console.log("Connected to Mongo Successfully");
+    }, (err) => {
+        if (err) {
+            console.error("Error connecting to MongoDB:", err.message);
+        } else {
+            console.log("Connected to Mongo Successfully");
+        }
     });
 };
 
