@@ -25,8 +25,17 @@ app.get("/getUsers", async (req, res) => {
     }
 });
 
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/notes', require('./routes/notes'));
+try {
+    app.use('/api/auth', require('./routes/auth'));
+} catch (err) {
+    console.error("Error loading auth routes:", err);
+}
+
+try {
+    app.use('/api/notes', require('./routes/notes'));
+} catch (err) {
+    console.error("Error loading notes routes:", err);
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
