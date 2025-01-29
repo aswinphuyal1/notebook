@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint src/ --fix",
     "preview": "vite preview",
-    "both": "concurrently \"npm run server\" \"npm run client\"",
+    "both": "concurrently  \"npm run client\" \"npm run server\"",
     "server": "nodemon backend/index.js",
     "client": "vite"
   },
