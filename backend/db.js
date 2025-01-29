@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 // Use the provided connection string
 const mongoURI = "mongodb://127.0.0.1:27017/curd";
-
 const connectToMongo = () => {
     mongoose.connect(mongoURI, { 
         useNewUrlParser: true, 
