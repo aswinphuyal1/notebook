@@ -9,7 +9,9 @@
     "build": "vite build",
     "lint": "eslint src/ --fix",
     "preview": "vite preview",
-    "both ": "concurrently \"npm run start\" \"npm run dev\""
+    "both": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/index.js",
+    "client": "vite"
   },
   "dependencies": {
     "concurrently": "^9.1.2",
