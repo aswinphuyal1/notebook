@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   res.send('Notes route');
 });
 
+
 // ROUTE 1: Get All the Notes using: GET "/api/notes/fetchallnotes". Login required
 router.get('/fetchallnotes', fetchuser, async (req, res) => {
     try {
