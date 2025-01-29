@@ -33,7 +33,7 @@ router.post('/createuser', [
     const salt = await bcrypt.genSalt(10);
     const secPass = await bcrypt.hash(req.body.password, salt);
 
-    
+
     // Create a new user
     user = await User.create({
       
@@ -49,6 +49,7 @@ router.post('/createuser', [
     const authtoken = jwt.sign(data, JWT_SECRET);
 
     // res.json(user)
+    
     res.json({ authtoken })
 
   } catch (error) {
