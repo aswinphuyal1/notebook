@@ -5,6 +5,7 @@ const NotesSchema = new Schema({
     user:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
+        //user lai link garya
     },
     title:{
         type: String,
