@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -13,9 +12,20 @@ import Home from './components/Home';
 function App() {
   return (
     <>
+    <Router>
     <Navbar />
-    <About />
-    <Home />
+
+    <Switch>
+          <Route  path="/">
+            <Home />
+          </Route>
+          <Route  exact path="/about">
+            <About />
+          </Route>
+         
+        </Switch>
+     
+    </Router>
     </>
   );
 }
