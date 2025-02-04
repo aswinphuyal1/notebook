@@ -8,12 +8,14 @@ const Notestate = (props) =>
             "name":"Harry",
             "class":"5th"
         }
+;
+
         return(
             <notecontext.Provider value={state}>
                 {props.children}
             </notecontext.Provider>
         )
-        
+
 
 
 }
