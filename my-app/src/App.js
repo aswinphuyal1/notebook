@@ -7,11 +7,12 @@ import {
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Home from './components/Home';
+import Notestate from './context/Notestate';
 
 function App() {
   return (
     <>
-    
+    <Notestate>
       <Router>
         <Navbar />
         <Routes>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
+      </Notestate>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import notecontext from "./Notecontext";
+import notecontext from "./notecontext";
 
 
 const Notestate = (props) =>
@@ -9,10 +9,13 @@ const Notestate = (props) =>
             "class":"5th"
         }
         return(
-            <Notestate.provider value={state}>
+            <notecontext.Provider value={state}>
                 {props.children}
-            </Notestate.provider>
+            </notecontext.Provider>
         )
+        
+
 
 }
+
 export default Notestate;
