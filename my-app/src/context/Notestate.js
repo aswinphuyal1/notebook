@@ -15,5 +15,4 @@ const Notestate = (props) =>
         )
 
 }
-
 export default Notestate;
