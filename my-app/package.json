@@ -20,7 +20,6 @@
     "eject": "react-scripts eject",
     "both": "concurrently \"npm start\" \"cd ../backend && npm start\""
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,5 +38,4 @@
       "last 1 safari version"
     ]
   }
-  
 }

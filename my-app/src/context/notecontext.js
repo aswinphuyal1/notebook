@@ -1,8 +1,5 @@
-import  { createContext } from 'react'
-//context lai import gareko ho
+import { createContext } from 'react';
 
-const notecontext=createContext();
-
-
+const notecontext = createContext();
 
 export default notecontext;

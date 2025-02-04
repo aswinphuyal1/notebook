@@ -12,18 +12,17 @@ import Notestate from './context/Notestate';
 function App() {
   return (
     <>
-    <Notestate>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <Notestate>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Router>
       </Notestate>
     </>
   );
 }
-
 
 export default App;
