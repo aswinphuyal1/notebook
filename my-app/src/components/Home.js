@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div classname="cointariner" >
-   <h1>User enter your Notes here please</h1>
+    <div classname="cointariner my-4" >
+   <h1>👨🏻‍🎨User enter your Notes here please🧔🏻‍♂️</h1>
    <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -21,7 +21,7 @@ const Home = () => {
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-   <h1>yoru Notes</h1>
+   <h1>Your  Notes🦹</h1>
     </div>
   )
 }
