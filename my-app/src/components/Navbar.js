@@ -1,7 +1,14 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Google Analytics
+    console.log(location.pathname);
+  }, [location]);
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
       <div className="container-fluid">
@@ -25,7 +32,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
