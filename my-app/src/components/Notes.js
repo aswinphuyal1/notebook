@@ -2,6 +2,7 @@
 
 import React, { useContext } from 'react';
 import notecontext from '../context/notecontext';
+import Noteitem from './Noteitem';
 const Notes = () => {
 
     const context = useContext(notecontext);
@@ -13,7 +14,7 @@ const Notes = () => {
           <h1>Your Notes🦹</h1>
     
     {notes.map((note) => {
-      return note.title;
+      return <Noteitem note={note}/>
     })}
     </div>
   )
