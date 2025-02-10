@@ -25,11 +25,7 @@ const Home = () => {
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
 
-      <h1>Your Notes🦹</h1>
-    
-      {notes.map((note) => {
-        return note.title;
-      })}
+  
      </div>
   );
 }
